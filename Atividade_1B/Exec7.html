@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Exercício 7</title>
+</head>
+<body>
+    <form>
+        <center><h1>Digite um texto e ele ficará em capslock</h1>
+        <input type="text" id="txt" placeholder="Digite um texto"><br>
+        <button id="capslock">TRANSFORMAR</button></center>
+    </form>
+
+    <script>
+        var capslock = document.getElementById("capslock");
+        var texto = document.getElementById("txt");
+
+        capslock.addEventListener("click", function(event) {
+            event.preventDefault(); // Evita o comportamento padrão do botão (submit do formulário)
+
+            var txt = texto.value.trim(); // Remove espaços em branco no início e no final
+            if (txt !== "") { // Verifica se o campo não está vazio
+                var uppercase_txt = txt.toUpperCase();
+                var win = window.open("", "_blank");
+                win.document.write("<h1>" + uppercase_txt + "</h1>");
+            } else {
+                alert("Por favor, insira um texto.");
+            }
+        });
+    </script>
+</body>
+</html>
