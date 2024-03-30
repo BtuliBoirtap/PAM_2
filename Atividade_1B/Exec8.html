@@ -51,11 +51,11 @@
             } else if (!operacaoSelecionada && (num1Preenchido && num2Preenchido)) {
                 alert("Por favor, selecione uma operação.");
                 return;
-            } else {
+            } else if (!operacaoSelecionada && (!num1Preenchido || !num2Preenchido)){
                 alert("Por favor, preencha os campos.");
                 return;
             }
-
+3
             var resultado;
             if (document.getElementById('soma').checked) {
                 resultado = "Resultado: " + soma();
