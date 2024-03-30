@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Exercício 3</title>
+    </head>
+    <body>
+        <button id="botao">Sugestão</button>
+        <script>
+            //document.getElementById();
+            const button = document.getElementById('botao');
+            button.addEventListener('click', () => {
+            alert('Sugestão do dia: um bolinho de fubá cairia bem!');});
+
+            //document.getElementsByTagName();
+            const buttons = document.getElementsByTagName('button');
+            console.log(buttons);
+
+            //document.getElementsByClassName();
+            const elements = document.getElementsByClassName('botao');
+            console.log(elements);
+
+            //document.querySelector();
+            const oneButton = document.querySelector('#botao');
+            console.log(oneButton);
+            
+            //document.querySelectorAll();
+            const allButtons = document.querySelectorAll('button');
+            console.log(allButtons);
+        </script>
+    </body>
+</html>
