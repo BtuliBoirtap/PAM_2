@@ -45,13 +45,13 @@
             var num2Preenchido = num2.value.trim() !== "";
 
             // Verificar se nem a operação e nenhum dos campos numéricos foram preenchidos
-            if (!operacaoSelecionada && !num1Preenchido && !num2Preenchido) {
+            if (!operacaoSelecionada && (!num1Preenchido || !num2Preenchido)) {
                 alert("Por favor, preencha os campos.");
                 return;
             } else if (!operacaoSelecionada && (num1Preenchido && num2Preenchido)) {
                 alert("Por favor, selecione uma operação.");
                 return;
-            } else if (!operacaoSelecionada && (!num1Preenchido || !num2Preenchido)){
+            } else if (operacaoSelecionada && (!num1Preenchido || !num2Preenchido)){
                 alert("Por favor, preencha os campos.");
                 return;
             }
